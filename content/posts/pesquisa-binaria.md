@@ -1,7 +1,7 @@
 ---
 title: "Pesquisa binária"
 date: 2023-08-27T11:30:03+00:00
-weight: 2
+# weight: 4999
 # aliases: ["/first"]
 tags: ["algoritmos"]
 author: "Anderson Teala"
@@ -18,7 +18,7 @@ disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
 hideSummary: false
-searchHidden: true
+# searchHidden: true
 ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true

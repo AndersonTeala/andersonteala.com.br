@@ -1,7 +1,7 @@
 ---
 title: "Olá pra mim mesmo!"
 date: 2023-08-27T11:30:03+00:00
-weight: 1
+# weight: 5000
 # aliases: ["/first"]
 tags: ["myself"]
 author: "Anderson Teala"
@@ -18,7 +18,7 @@ disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
 hideSummary: false
-searchHidden: true
+# searchHidden: true
 ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true

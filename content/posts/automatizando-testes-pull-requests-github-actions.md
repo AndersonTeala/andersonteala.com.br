@@ -1,7 +1,7 @@
 ---
 title: "Automatizando Testes e Pull Requests com GitHub Actions"
 date: 2023-09-18T11:30:03+00:00
-weight: 3
+# weight: 4998
 # aliases: ["/first"]
 tags: ["gitHub", "actions", "CI/CD", "automação", "testes", "pull requests"]
 author: "Anderson Teala"
@@ -18,7 +18,7 @@ disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
 hideSummary: false
-searchHidden: true
+# searchHidden: true
 ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
@@ -26,11 +26,10 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-    image: "<image path/url>" # image path/url
+    image: "https://miro.medium.com/v2/resize:fit:900/0*AohySn45UIt-1lwu.png" # image path/url
     alt: "<alt text>" # alt text
     caption: "<text>" # display caption under cover
     relative: false # when using page bundles set this to true
-    hidden: true # only hide on current single page
 editPost:
     URL: "https://github.com/AndersonTeala"
     Text: "GitHub"

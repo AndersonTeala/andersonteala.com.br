@@ -23,7 +23,7 @@ params:
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
-  defaultTheme: auto # dark, light
+  defaultTheme: dark # dark, light
   disableThemeToggle: false
 
   ShowReadingTime: true
@@ -74,7 +74,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Anderson Teala"
-    Content: Meu lugar para compartilhar conhecimento e experiências.
+    # Content: Meu lugar para compartilhar conhecimento e experiências.
 
   socialIcons:
     - name: twitter
@@ -115,9 +115,9 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: categories
-      name: categories
-      url: /categories/
+    - identifier: search
+      name: search
+      url: /search/
       weight: 10
     - identifier: tags
       name: tags
