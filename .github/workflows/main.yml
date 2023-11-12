@@ -40,6 +40,16 @@ jobs:
     runs-on: ubuntu-latest
     needs: generate-public
     steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+
+    - name: 🛠️ Install Hugo
+      run: |
+        sudo apt-get install hugo
+
+    - name: 📂 Generate Hugo public folder
+      run: hugo
+
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
