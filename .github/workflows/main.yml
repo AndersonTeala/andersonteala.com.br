@@ -58,3 +58,15 @@ jobs:
         password: ${{ secrets.ftp_password }}
         local-dir: ./public/
         server-dir: andersonteala.hamstercode.com.br/
+
+  # send-telegram-message:
+  #   name: 📬 Send Telegram Message
+  #   runs-on: ubuntu-latest
+  #   needs: [web-deploy]
+  #   steps:
+  #   - name: 🤖 Send Message
+  #     uses: appleboy/telegram-action@v0.2.0
+  #     with:
+  #       to: ${{ secrets.telegram_chat_id }}
+  #       token: ${{ secrets.telegram_bot_token }}
+  #       message: "✅ Deployed successfully, check it out at https://andersonteala.hamstercode.com.br"
