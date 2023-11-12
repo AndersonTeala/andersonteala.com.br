@@ -20,6 +20,9 @@ jobs:
     - name: 📂 Generate Hugo public folder
       run: hugo
 
+    - name: 📂 Show public folder
+      run: ls -lhart
+
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
