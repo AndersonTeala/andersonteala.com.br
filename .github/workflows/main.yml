@@ -56,7 +56,7 @@ jobs:
         server: ${{ secrets.ftp_host }}
         username: ${{ secrets.ftp_user }}
         password: ${{ secrets.ftp_password }}
-        local-dir: ./public/
+        local-dir: ./public_teala/
         server-dir: andersonteala.hamstercode.com.br/
 
   # send-telegram-message:
