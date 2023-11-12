@@ -124,12 +124,6 @@ Ao final da operação, olhei para a equipe e disse: “Missão cumprida”. Gra
 
 E assim, meus caros, essa é a história de como o CI/CD, essa ferramenta mágica da automação, nos ajudou a superar um dos desafios mais difíceis que já enfrentei. Às vezes, na vida do crime, é preciso recorrer às armas mais inesperadas para alcançar o sucesso.”
 
-## Algoritmo de pesquisa binária
-
-Todos os exemplos eu tirei do livro que estou lendo. Segue o link do livro:
-
-- [Algoritmos: Teoria e Prática](https://amzn.to/47jr5o6)
-
 ## Conclusão
 
 Automatizar testes e a criação de pull requests pode economizar tempo e melhorar a qualidade do seu código. O GitHub Actions oferece uma maneira poderosa de configurar esses processos de automação em seu repositório GitHub. Personalize o fluxo de trabalho de acordo com suas necessidades específicas e aproveite os benefícios da automação.
