@@ -1,6 +1,6 @@
 ---
 title: "Olá pra mim mesmo!"
-date: 2023-08-27T11:30:03+00:00
+date: 2023-08-27T11:00:03+00:00
 # weight: 5000
 # aliases: ["/first"]
 tags: ["myself"]
