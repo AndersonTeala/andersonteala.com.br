@@ -33,26 +33,26 @@ cover:
 editPost:
     URL: "https://github.com/AndersonTeala/breadth-first-search"
     Text: "GitHub"
-    appendFilePath: true # to append file path to Edit link
+    appendFilePath: false # to append file path to Edit link
 ---
 
 ## Explorando Pesquisa em Largura (Breadth-First Search) com Go: Encontrando Vendedores
 
-Às vezes realizamos uma simples tentativa “achamos que é uma tratativa simples” definimos um array para receber uma quantidade de informações como por exemplo nomes. Até aqui tudo bem, queremos pesquisar um nome e encontrar ele no array, mas será que realmente algum dia paramos e pensamos se esta abordagem é correta ? Se você automaticamente disse que sim parabéns, pare a leitura imediatamente.
+Às vezes realizamos uma simples tentativa “achamos que é uma tratativa simples” definimos um array para receber uma quantidade de informações como por exemplo nomes. Até aqui tudo bem, queremos pesquisar um nome e encontrar ele no array, mas será que realmente algum dia paramos e pensamos qual é a abordagem correta ?
 
-Fala ai pessoal beleza, aqui é o Teala! EStou aqui para compartilhar com vocês um pouco do meu conhecimento sobre algoritmos. Hoje vamos falar sobre Pesquisa em Largura (Breadth-First Search) com Go.
+Fala ai pessoal beleza, aqui é o Teala!  E estou aqui para compartilhar com vocês um pouco do meu conhecimento sobre algoritmos. Hoje vamos falar sobre Pesquisa em Largura (Breadth-First Search).
 
 Nas minhas aventuras de estudos sobre algoritmos, estou atualmente realizando a leitura de um livro chamado [Entendendo algoritmos](https://amzn.to/47P5MLn). Neste livro o autor [Aditya Y. Bhargava](https://www.linkedin.com/in/adityabhargava/) aborda diversos assuntos sobre algoritmos, e um deles é a Pesquisa em Largura (Breadth-First Search).
 
 ## O que é Pesquisa em Largura (Breadth-First Search) ?
 
-É uma técnica utilizada em algoritmos de grafos para realizar a busca de um vértice inicial até um vértice final. A Pesquisa em Largura conhecida como (Breadth-First Search) é utilizar uma fila para realizar a busca, ou seja, o primeiro elemento a entrar na fila é o primeiro a sair.
+Vamos lá. É uma técnica utilizada em algoritmos de grafos para realizar a busca de um vértice inicial até um vértice final. A Pesquisa em Largura conhecida como (Breadth-First Search) é basicamente utilizar uma fila para realizar uma busca, ou seja, o primeiro elemento a entrar na fila é o primeiro a sair.
 
 ## Como funciona a Pesquisa em Largura (Breadth-First Search) ?
 
-A Pesquisa começa a partir de um vértice inicial, e a partir dele explora todos os seus vizinhos antes de mover para os vizinhos dos vizinhos. Em outras palavras, a Pesquisa em Largura (Breadth-First Search) explora os vértices mais próximos antes de explorar os vértices mais distantes.
+A Pesquisa começa a partir de um vértice inicial, e a partir dele explora todos os seus vizinhos antes de mover para os vizinhos dos vizinhos. Em outras palavras, a Pesquisa em Largura (Breadth-First Search) explora os vértices mais próximos antes de explorar os vértices mais distantes. Realmente sempre verificando o primeiro elemento da fila.
 
-Vamos imaginar que você mora em um condomínio (onde existe outros condomínios ao lado também), e você quer saber se algum dos ses vizinhos são vendedores de sorvetes (Estou dando um exemplo bem simples com sorvete para simplificar o entendimento, e por que também estamos em um calor de 40 graus aqui). Então você monta uma lista com todos os seus vizinhos e passa a bater na porta de todos (estou imaginando essa cena), perguntando se o seu vizinho é vendedor de sorvete, se caso ele não vende sorvete você risca o nome dele da lista e coloca no final da lista todos os vizinhos do seu vizinho que você acabou de bater na porta dele e passa a bater na porta do vizinho da sua lista seguinte, porém sempre lembrando que cada um dos seus vizinhos possui outros vizinhos, e que cada vizinho, possui outros vizinhos, praticamente uma rede social, amigos de amigos de amigos de amigos, e assim por diante. Caso você encontre um vizinho que vende sorvete você para de bater na porta dos seus vizinhos e vai comprar sorvete com ele. Basicamente é isso que a Pesquisa em Largura (Breadth-First Search) faz.
+Vamos imaginar o seguinte, que você mora em um condomínio (onde existe outros condomínios ao lado também), e você quer saber se algum dos seus vizinhos são vendedores de sorvetes (Estou dando um exemplo bem simples com sorvete para simplificar o entendimento, e por que também estamos em um calor de 40 graus aqui). Então você monta uma lista com todos os seus vizinhos e passa a bater na porta de cada um deles (estou imaginando essa cena), perguntando a cada vizinho um a um se ele é vendedor de sorvete, se caso ele não vende sorvete você risca o nome dele do topo da lista e coloca no final da lista todos os vizinhos do seu vizinho que você acabou de bater na porta dele e passa a bater na porta do vizinho da sua lista seguinte, porém sempre lembrando que cada um dos seus vizinhos possui outros vizinhos, e que cada vizinho, possui outros vizinhos, praticamente como em uma rede social, amigos de amigos de amigos de amigos, e assim por diante. Caso você encontre um vizinho que vende sorvete você para de bater na porta dos seus vizinhos e vai comprar sorvete com ele. Basicamente é isso que a Pesquisa em Largura (Breadth-First Search) faz.
 
 ## Vamos para a prática
 

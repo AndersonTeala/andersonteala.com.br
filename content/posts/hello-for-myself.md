@@ -37,4 +37,4 @@ editPost:
     appendFilePath: false # to append file path to Edit link
 ---
 
-Estou montando esse blog para alimentar ele com todas as minhas informações que desejo acessar futuramente como uma forma de aprendizado pra mim mesmo.
+Estou montando esse blog para compartilhar um pouco do meu conhecimento e experiência que desejo acessar futuramente como uma forma de aprendizado pra mim mesmo e também para que outras pessoas possam se acessar o conteúdo que eu compartilhar aqui.
