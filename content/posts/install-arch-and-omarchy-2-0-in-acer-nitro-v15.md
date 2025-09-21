@@ -31,7 +31,7 @@ cover:
     caption: "<text>" # display caption under cover
     relative: false # when using page bundles set this to true
 editPost:
-    URL: "https://github.com/AndersonTeala/breadth-first-search"
+    URL: "https://github.com/AndersonTeala/install-arch-and-omarchy-2-0-in-acer-nitro-v15"
     Text: "GitHub"
     appendFilePath: false # to append file path to Edit link
 ---
