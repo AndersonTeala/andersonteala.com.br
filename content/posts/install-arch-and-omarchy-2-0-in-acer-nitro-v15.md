@@ -209,27 +209,22 @@ Pronto, aqui sigo e coloco para instalar. Mais como sempre a vida nunca é bela 
 
 Por algum fucking motivo não estava instalando o Arch, no meio do processo causava um erro, já era mais de 1 da manhã, eu estava cansado demais não queria mais perder tempo com isso, instalar o Omarchy direto, me fez perder um bom tempo com a questão do Wi-Fi, decidi refazer meu pendrive novamente e depois de diversas tentativas, sim eu refiz o processo todo novamente algumas vezes, sendo eles: conectar Wi-Fi, configurar partições, mirros, etc...
 
-Tá aqui te juro, eu estava muito cansado, mais decidi entender o motivo do problema, eu estava montando o disco do tipo Btrfs somente com o mountopoint: (/) percebi que isso estava causando um problema, e não conseguia montar o disco, finalizava a instalação e aparecia o erro com a mensagem:
-
-[COLOCAR A FOTO DO ERRO]
+Tá aqui te juro, eu estava muito cansado, mais decidi entender o motivo do problema, eu estava montando o disco do tipo Btrfs somente com o mountopoint: (/) percebi que isso estava causando um problema, e não conseguia montar o disco, finalizava a instalação e aparecia o erro com a mensagem.
 
 Tentei usar o pendrive novamente para arrumar isso, mais percebi que reparar seria muito custoso, estava quebrado de tentas tentativas e erros, mais não abandonei a situação.
 
 Beleza vamos lá novamente, depois de tentar diversas vezes e nada, fui atrás e vi que o correto seria subs dentro do Btrfs, novamente refiz todo o processo e coloquei o seguinte:
 
-@ /
-
-@home /home
-
-@log /var/log
-
-@pkg /var/cache/pacman/pkg
+- @ /
+- @home /home
+- @log /var/log
+- @pkg /var/cache/pacman/pkg
 
 Cansado para um caralho, deu certo, arch instalado finalmente!!! Aaaaaaaaaaaaahh!!!
 
 Lembrando eu escolhi o profile do Hyprland, ou seja se você também escolheu, não fique preocupado, aqui verá que ele realmente é cru, não tem nada é virgem, mais não se preocupe vamos configurar e embelezar.
 
-Antes atualize o sistema não esqueça pois eu esqueci e tive alguns problemas pois não encontrava os pacotes necessários para realizar o download, pois o Omarchy usa o pacman para instalar vários pacotes de uma vez, e eu estava usando um mirror ruim, e ainda pacotes não tinham então atualizei o meu:
+Antes atualize o sistema não esqueça pois eu esqueci e tive alguns problemas pois não encontrava os pacotes necessários para realizar o download, pois o Omarchy usa o pacman para instalar vários pacotes de uma vez, e eu estava usando um mirror ruim, e ainda pacotes não tinham então atualizei:
 
 ```bash
 sudo pacman -Syyu
@@ -279,7 +274,7 @@ sudo pacman -S sof-firmware
 
 Depois reinicie o sistema
 
-Adoro e sempre recomendo utilizar o asdf, para conseguir gerenciar versões de linguagens no mesmo sistema de forma unificada, ele resolve problemas que um projeto utilizar PHP 7.4, outro PHP 8.2, com isso pose utilizar as duas versões no sistema, sendo uma global ou pode utilizar a versão na pasta do projeto, lindo e maravilhoso, vou explicar um exemplo como você pode fazer com ele. Sendo assim você pode gerenciar várias linguagens no mesmo lugar, você pode ter Node, Python, Go, PHP, Java, Elixir, Rust, etc…. tudo sob controle do asdf.
+Adoro e sempre recomendo utilizar o asdf, para conseguir gerenciar versões de linguagens no mesmo sistema de forma unificada, ele resolve problemas que um projeto utilizar PHP 7.4, outro PHP 8.2, com isso pode utilizar as duas versões no sistema, sendo uma global ou pode utilizar a versão na pasta do projeto, lindo e maravilhoso, vou explicar um exemplo como você pode fazer com ele. Sendo assim você pode gerenciar várias linguagens no mesmo lugar, você pode ter Node, Python, Go, PHP, Java, Elixir, Rust, etc…. tudo sob controle do asdf.
 
 Ele cria arquivos .tool-versions, em cada projeto, você pode salvar quais versões usar, e quem clonar o repositório pode simplesmente rodar asdf install para ter o mesmo ambiente.
 
@@ -374,7 +369,7 @@ atuin sync
 
 Lembra quando comentei no particionamento sobre o Btrfs e Bootloader usar o GRUB, bom agora vou te explicar o motivo.
 
-O Btrfs é um sistema de arquivos modeno, cheio de recursos que trazem muitas vantagens para quem gosta de ter o controle com o Linux, o principal motivo é pelos Snapshots, ele permite criar Snapshots (cópias instantâneas do estado do sistema de arquivos), pois o Arch pode acabar quebrando como comentei mais a cima na instalação, então isso é extremamente útil quando preciso voltar no tempo e fico tranquilo para realizar testes, atualizações e recuperar falhas.
+O Btrfs é um sistema de arquivos moderno, cheio de recursos que trazem muitas vantagens para quem gosta de ter o controle com o Linux, o principal motivo é pelos Snapshots, ele permite criar Snapshots (cópias instantâneas do estado do sistema de arquivos), pois o Arch pode acabar quebrando como comentei mais a cima na instalação, então isso é extremamente útil quando preciso voltar no tempo e fico tranquilo para realizar testes, atualizações e recuperar falhas.
 
 Lembra do meu problema na instalação? Foda… então ele realmente precisa criar subvolumes para particionar o disco rigidamente, eu criei os subvolumes como necessário, isso ajuda a organizar os snapshots do sistema.
 
@@ -399,6 +394,11 @@ sudo -E timeshift-gtk
 - **Tipo**: selecione **Btrfs**.
 - **Local do snapshot**: a mesma partição Btrfs do `/` (ele identifica).
 - **Agendamento**: Eu coloquei da maneira que funciona pra mim, escolha a sua.
+    - Monthly 2 (enabled)
+    - Weekly 3 (enabled)
+    - Daily 5 (enabled)
+    - Hourly 6 (enabled)
+    - Boot 5 (disabled)
 - **Usuários**: Por padrão o Timeshift NÂO INCLUI seus arquivos pessoais ele é focado no **sistema**. Mais eu vou incluir a Home isso é opcional e lembre que restaurar também pode **voltar arquivos pessoais** para versões antigas.
 
 Segue um CLI para validar/criar/deletar seu snapshots:
@@ -497,9 +497,11 @@ Por fim e por ultimo eu instalei o Keepass para gerenciamento de senhas, vou esc
 
 Bom aqui entra o Keepass, existem outros muito bom também, até mesmo 1Password que é pago, grandes empresas usam e tem nome, até mesmo eles não tem acesso aos dados, o Keepass gerencia as senhas é confiável e eficiente.
 
+Atualmente utilizo o Keepass para fins profisionais, carrego um pen-drive comigo (Não deixo banco e file key juntos jamais) mais o que tenho utilizado mais é o Bitwarden mesmo coisa, porém você pode utilizar o server da empresa ou subi o seu próprio em um homelab, logo mais vou escrever sobre isso.
+
 Ele utiliza criptografia (AES e Twofish) para proteger o seu banco de dados e as senhas nele, mesmo que alguém consiga acesso ao arquivo do Keepass, sem a senha mestre, suas informações estão praticamente inacessíveis.
 
-Ele tem código aberto pode validar se existe falhas de seguranças ou backdoors, existe uma camada extra de confiança em comparação a outros.
+Ele tem código aberto pode validar se existe falhas de seguranças ou backdoors, existe uma camada extra de confiança em comparação a outros. Mesma coisa o Bitwarden.
 
 O armazenamento para gerenciar as senhas não é na nuvem, e sim ele salva tudo localmente no seu computador, pendrive, algum serviço de nuvem da sua escolha e etc…
 
