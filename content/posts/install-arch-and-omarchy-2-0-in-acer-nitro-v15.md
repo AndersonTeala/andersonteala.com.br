@@ -1,11 +1,11 @@
 ---
 title: "Montando meu novo ambiente Arch com Omarchy 2.0 / Acer Nitro V15"
 date: 2025-08-31T21:31:09+00:00
-# weight: 4998
-# aliases: ["/first"]
+## weight: 4998
+## aliases: ["/first"]
 tags: ["arch", "linux", "omarchy", "acer", "nitro", "v15"]
 author: "Anderson Teala"
-# author: ["Me", "You"] # multiple authors
+## author: ["Me", "You"] ## multiple authors
 showToc: true
 TocOpen: false
 draft: false
@@ -13,12 +13,12 @@ hidemeta: false
 comments: false
 description: ""
 canonicalURL: ""
-# canonicalURL: "https://canonical.url/to/page"
-disableHLJS: true # to disable highlightjs
+## canonicalURL: "https://canonical.url/to/page"
+disableHLJS: true ## to disable highlightjs
 disableShare: false
 disableHLJS: false
 hideSummary: false
-# searchHidden: true
+## searchHidden: true
 ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
@@ -26,14 +26,14 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-    image: # image path/url
-    alt: "<alt text>" # alt text
-    caption: "<text>" # display caption under cover
-    relative: false # when using page bundles set this to true
+    image: ## image path/url
+    alt: "<alt text>" ## alt text
+    caption: "<text>" ## display caption under cover
+    relative: false ## when using page bundles set this to true
 editPost:
     URL: "https://github.com/AndersonTeala/install-arch-and-omarchy-2-0-in-acer-nitro-v15"
     Text: "GitHub"
-    appendFilePath: false # to append file path to Edit link
+    appendFilePath: false ## to append file path to Edit link
 ---
 
 ## Montando meu novo ambiente Arch com Omarchy 2.0 / Acer Nitro V15
@@ -42,7 +42,7 @@ Fiz um upgrade no meu setup, e troquei meu Notebook, eu precisava de um para con
 
 Começei a fazer várias buscas pela internet por alguns meses, até que encontrei finalmente depois de tempos e tempos buscando, eu não tenho pressa, gosto de procurar, pesquisar e entender antes de realizar qualquer compra, mesmo que dure meses, eu vou esperar para não comprar no desespero e me fuder lá na frente.
 
-# 1 - Notebook e novo ambiente
+## 1 - Notebook e novo ambiente
 
 Depois de longas pesquisar e frescuras, decidi então comprar um Notebook Gamer Acer Nitro V, Intel Core i5-13ªGen, 8GB, SSD 512GB, RTX4050, Tela 15.6" Full HD, 144Hz. Ainda vou fazer um post falando sobre minhas expectativas e frustrações com o Notebook. Logo de cara decidi fazer um upgrade de memória RAM e coloquei mais um SSD de 1TB.
 
@@ -62,7 +62,7 @@ Eu sei que hoje em dia tem o **archinstall** que ajuda muito na instalação, ma
 
 Decidi! vou instalar o **Arch** e sair um pouco da caixinha, eu gosto, é bom sair da zona de conforto, quando percebo que estou muito confortável com algo, eu começo a fazer mudanças para não entrar nessa rotina. Logo em seguida eu vi que muitos usando o Arch com Hyprland, porra adorei quando eu vi isso, deixando o desktop muito moderno e de uma maneira que eu curti muito, quando pesquisei  sobre o Hyprland , vi que um desenvolvedor que eu sigo tinha acabado de fazer uma postagem sobre o assunto e ai ganhei na loteria.
 
-# 2 - Upgrade no Notebook
+## 2 - Upgrade no Notebook
 
 Como eu comprei a memória RAM e ainda não chegou coloquei somente o SDD no Notebook inicialmente, assim que chegar a memória eu faço um edit: e coloco ela.
 
@@ -76,7 +76,7 @@ Nesse SSD eu usava em outro Notebook, então eu tinha um Ubuntu instalado nele, 
 
 Decido novamente vou apagar o Ubuntu e instalar o Arch + Omarchy.
 
-# 3 - Instalando Omarchy
+## 3 - Instalando Omarchy
 
 Aqui! todos dizem que instalar um Arch é a coisa mais complicado do mundo, concordo e discordo, é complicado para quem ainda é um iniciante e nunca mexeu em um Linux, mais nunca deve deixar de tentar pelo menos uma vez, como comentei mais a cima, atualmente temos o archinstall que facilita muito a instalação.
 
@@ -101,7 +101,7 @@ O mais bacana é que ele inclui pacotes para desenvolvimento e produtividade, se
 
 Fácil para personalizar, permite alterar e ajustar tudo que necessário, o céu é o limite aqui.
 
-# 4 - Instalando Arch + Omarchy
+## 4 - Instalando Arch + Omarchy
 
 Agora voltei para o windows e busquei a iso do Arch para fazer um pendrive boot e começar o processo tudo novamente. Eu gosto muito de usar o Rufus, ele é meu parceiro para fazer os pendrive boot, eu já usei o Balena Etcher para fazer alguns com o MacOS.
 
@@ -240,7 +240,7 @@ curl -fsSL https://omarchy.org/install | bash
 
 Pronto, somente seguir as instruções e deixar ele fazer o restante. Aqui acabou temos o Omarchy instalado e pronto para uso.
 
-# 4 - Omarchy instalado e configurando
+## 4 - Omarchy instalado e configurando
 
 Eu acostumado a usar o Ubuntu, aqui foi realmente sair fora da caixinha, em quanto escrevo esse artigo, estou usando o meu Arch Linux + Omarchy, e realmente foi uma escolha nota 10.
 
@@ -287,24 +287,24 @@ yay -S asdf-vm
 Exemplo para instalar nodejs:
 
 ```bash
-# instalar plugin para Node.js
+## instalar plugin para Node.js
 asdf plugin-add nodejs
 
-# instalar Node.js 20
+## instalar Node.js 20
 asdf install nodejs 20.5.1
 
-# usar globalmente
+## usar globalmente
 asdf global nodejs 20.5.1
 
-# checar versão em uso
+## checar versão em uso
 node -v
 ```
 
 Exemplo: Node 18 para um projeto e Node 20 global ou para outro local.
 
 ```bash
-asdf global nodejs 20.5.1   # Define versão global
-asdf local nodejs 18.17.1   # Define versão só para o projeto
+asdf global nodejs 20.5.1   ## Define versão global
+asdf local nodejs 18.17.1   ## Define versão só para o projeto
 ```
 
 Como pode ver o asdf é como um "gerente de RH" das suas linguagens e ferramentas, mantendo várias versões organizadas e fáceis de trocar.
@@ -326,14 +326,14 @@ Depois instalei 2 plugins que eu uso muito:
 Zsh-syntax-highlighting: Adiciona um destaque de sintaxe em quanto você digita no terminal, ou seja ele vai destacar comandos válidos como verdes, comandos inválidos vermelho e strings, opções de paths ficam coloridos.
 
 ```bash
-# Zsh-syntax-highlighting
+## Zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
 Zsh-autosuggestions: mostra sugestões de comandos com base no seu histórico, em quanto você digita aparece cinza claro e o restante do comando sugerido, se a sugestão acertar pastar apertar tab para aceitar, ajuda muito a reconomizar tempo repetindo comandos que você usa com frequência.
 
 ```bash
-# Zsh-autosuggestions
+## Zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
@@ -365,7 +365,7 @@ atuin import auto
 atuin sync
 ```
 
-# 5 - Por que escolhi instalar meu Arch Linux com Btrfs e usar o GRUB como bootloader
+## 5 - Por que escolhi instalar meu Arch Linux com Btrfs e usar o GRUB como bootloader
 
 Lembra quando comentei no particionamento sobre o Btrfs e Bootloader usar o GRUB, bom agora vou te explicar o motivo.
 
@@ -404,19 +404,19 @@ sudo -E timeshift-gtk
 Segue um CLI para validar/criar/deletar seu snapshots:
 
 ```bash
-# listar snapshots
+## listar snapshots
 sudo timeshift --list
 
-# criar snapshot sob demanda (tag O=On-demand; D=Daily; etc.)
+## criar snapshot sob demanda (tag O=On-demand; D=Daily; etc.)
 sudo timeshift --create --comments "test snapshot"
 
-# restaurar (interativo)
+## restaurar (interativo)
 sudo timeshift --restore
 
-# deletar um snapshot específico
+## deletar um snapshot específico
 sudo timeshift --delete --snapshot "2025-08-31_12-00-00"
 
-# apagar todos (cuidado!)
+## apagar todos (cuidado!)
 sudo timeshift --delete-all
 
 ```
@@ -424,10 +424,10 @@ sudo timeshift --delete-all
 Verifique se o cron está rodando, caso não ative:
 
 ```bash
-# verifique se está rodando
+## verifique se está rodando
 systemctl status cronie
 
-# ative o cronie caso não esteja
+## ative o cronie caso não esteja
 systemctl start cronie
 ```
 
@@ -462,10 +462,10 @@ sudo chattr +C /var/log
 Apenas uma dica já que estamos falando de docker, as vezes é sempre bom limpar um pouco os arquivos de docker da sua máquina, mais cuidado ele realmente vai limpar e apagar tudo, imagens etc… recomendo fazer isso de vez em quando:
 
 ```bash
-# Limpa tudo
+## Limpa tudo
 docker system prune
 
-# Remove imagens etc...
+## Remove imagens etc...
 docker compose down —rmi all
 ```
 
@@ -515,7 +515,7 @@ sudo pacman -S keepassxc
 
 E pronto, só abrir e configurar, seja feliz.
 
-# Conclusão
+## Conclusão
 
 Esse jornada foi longa, muita coisa eu precisei parar, buscar e entender como os erros que tive na instalação. Não precisei configurar quase nada pois o Omarchy deixou quase tudo pronto pra mim, apenas fiz algumas alterações para deixar meu ambiente mais confortável o possível para usar, e sim ficou perfeito.
 
