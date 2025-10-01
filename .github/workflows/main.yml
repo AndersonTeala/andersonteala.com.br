@@ -11,18 +11,24 @@ jobs:
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
 
-      - name: 🛠️ Install Hugo
-        run: sudo apt-get install hugo -y
+      - name: 🛠️ Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
 
       - name: 📂 Build site
         run: hugo
 
-      - name: 🎉 Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      - name: 🎉 Deploy via SSH
+        uses: easingthemes/ssh-deploy@v2.2.11
         with:
-          server: ${{ secrets.ftp_host }}
-          username: ${{ secrets.ftp_user }}
-          password: ${{ secrets.ftp_password }}
-          local-dir: ./public/
-          server-dir: /public_html/
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rltgoDzvO --delete"
+          SOURCE: "public/"
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_USER: ${{ secrets.SSH_USER }}
+          TARGET: "/var/www/html/andersonteala.com.br"
