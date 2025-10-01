@@ -288,7 +288,7 @@ Exemplo para instalar nodejs:
 
 ```bash
 ## instalar plugin para Node.js
-asdf plugin-add nodejs
+asdf plugin add nodejs
 
 ## instalar Node.js 20
 asdf install nodejs 20.5.1
