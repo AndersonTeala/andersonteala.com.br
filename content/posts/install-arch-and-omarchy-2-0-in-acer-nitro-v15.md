@@ -36,8 +36,6 @@ editPost:
     appendFilePath: false ## to append file path to Edit link
 ---
 
-## Montando meu novo ambiente Arch com Omarchy 2.0 / Acer Nitro V15
-
 Fiz um upgrade no meu setup, e troquei meu Notebook, eu precisava de um para conseguir desenvolver mais tranquilamente, uso para o dia a dia e de vez em quando jogar, porém não sou muito de jogar em Notebook, prefiro jogar em console, de vez em quando jogo alguns como por exemplo um lolzinho.
 
 Começei a fazer várias buscas pela internet por alguns meses, até que encontrei finalmente depois de tempos e tempos buscando, eu não tenho pressa, gosto de procurar, pesquisar e entender antes de realizar qualquer compra, mesmo que dure meses, eu vou esperar para não comprar no desespero e me fuder lá na frente.
